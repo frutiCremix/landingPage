@@ -6,6 +6,9 @@
   color: #999999;
  box-sizing: border-box;
 }
+html{width: 100%;
+height: 100%;}
+
 h2{
   font-size: 50px;  
   color: rgb(31, 30, 30);
@@ -19,7 +22,7 @@ ul{
   list-style: none;
 }
 .icon>ul>li{
-  /*estilos de los iconos*/
+  
 }
 
 body{
@@ -40,8 +43,7 @@ body{
   position:fixed;
   top:10vh;
   left: 0px;
-  /*margin-bottom: 50px;
-  */background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   width: 180px;
@@ -49,14 +51,8 @@ body{
   border-radius: 0px 15px 15px 0;
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   overflow: hidden;
-}/*acomodar*/
-img-perfil{
-  width: 200px;
-  height: 250px;
-  background: #fff;
-  margin-top: 15vh;
-  border-radius: 50% 50% 50% 50%;
 }
+
 .nav>ul{
   margin:auto;
   
@@ -79,8 +75,7 @@ img-perfil{
 .presentacion{
   position: relative;
   grid-area: prensentacion;
-  /*background: url(https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000);
-  */width: 100%;
+ width: 100%;
   height: 100vh;
   max-width: 100%;
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
@@ -94,7 +89,7 @@ img-perfil{
 }
 .contentenedor-presentacion{
   display: flex;
-  /*ancho del contenedor de la animacion*/
+  
   width: 100%;
   
 }
@@ -246,38 +241,39 @@ input{
   background: rgb(143, 164, 233);
   color: #fff;
   margin:auto 100px ;
-}
-/*---------------------------------------*/
-/*---------------------------------------*/
-/*mientras se cumpla max width*/
-@media screen and (max-width:720px){
+} 
+@media only screen and (max-width: 600px) {
   body{
-    display: block;
-   
-    max-width:100% ;
-  }
-  .nav-back{
-    height: 10vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh 100vh 100vh 100vh;
+    grid-template-areas: 
+    "prensentacion"
+    "informacion"
+    "skills"
+    "contact";
   }
   .nav{
     position:fixed;
-    left: 30px;
-    top: 0;
-    /*margin-bottom: 50px;
-    */
+    top:0vh;
+    left: 0px;
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    width: 90%;
-    height:10vh;
+    width: 100%;
+    height: 10vh;
     border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
     overflow: hidden;
     z-index: 2;
-  }/*acomodar*/
+  }
   
   .nav>ul{
     margin:auto;
     display: flex;
-    flex-direction: row;
+    
+    
   }
   .nav>ul>li{
     padding: 20px;
@@ -292,62 +288,23 @@ input{
     background-color:  #999999;
     color: #fff;
     transition: 0.5s;
-  }
-  
+  }/*seccion presentacion*/
   .presentacion{
-    /*background: url(https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000);
-    */width: 100%;
+    grid-area: prensentacion;
+    width: 100%;
     height: 100vh;
-    background:#fff;
-    box-shadow: none;
   }
-  
   .contenedor-general{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding-top: 50vh;
-    width: 100%;
-    margin-left: 0px;
-    margin-top: 0vh;
-   
-  }
-  .contentenedor-presentacion{
-    display: flex;
-    /*ancho del contenedor de la animacion*/
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    border-color: #fff;
-    align-items: center;
-  }
-  .contentenedor-presentacion>h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1px solid #fff;
-  }
-  .icon{
-    width: 100%;
-    padding: 0px;
-    margin-top: 10px;
-  }
-  .icon>ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-decoration: none;
-    border: 1 solid;
-  }
-  
-  
+    position: relative;
+    margin: 35vh auto;
+  }/*fin seccion presentacion*/
+  /*seccion informacion*/
   .informacion{
     grid-area: informacion;
     background:#f1f3f5;
-    display: flex;
-    max-width: 100%;
-    height: 100vh;
+    width: 100%;
     overflow: hidden;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   }
   .informacion-content{
     background: #fff;
@@ -357,8 +314,9 @@ input{
     margin: 10vh auto;
     padding: 20px;
     text-align: center;
-    font-size: 24px; 
+    font-size: 18px; 
     overflow: hidden;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   }
   .informacion-p{
     margin: auto;
@@ -367,36 +325,33 @@ input{
   }
   .informacion-img>img{
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin:10vh auto 0 auto;
-  }
+    width: 200px;
+    height: 200px;
+    margin:10vh auto 75px auto;
+  }/*fin seccion informacion*/
+  /*seccion skills*/
   .skills{
     grid-area: skills;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background:#fff;
-    max-width: 100%;
+    width: 100%;
     height: 100vh;
-    justify-content: space-between;
-    padding:0 50px;
-    overflow: hidden;
+    padding: 0px 20px;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+    overflow: scroll;
+  
   }
   .skills-tarjeta{ 
-    width: 280px;
-    height: 500px;
-    
+    width: 300px;
+    height: 400px;
+    margin: 50px;
     box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
   
   }
-  .skills-tarjeta:hover{
-    transition: 0.5s;
-    transform: scale(1.01);
-    cursor: pointer;
-  }
   .skills-tarjeta>img{
-    width: 100%;
-    height: 250px;
+    width: 300px;
+    height: 400px;
     object-fit:cover;
   }
   .skills-tarjeta-bot{
@@ -407,19 +362,15 @@ input{
   }
   .skills-tarjeta-bot>p{
     line-height: 25px;
-  }
+  }/*fin seccion skills*/
+  /*seccion contacto*/
   
-  .contact{
-    grid-area: contact;
-    background: #f1f3f5;
-   height: 100vh;
-    overflow: hidden;
-    
-  }
   .formulario{
     display:flex;
     background: #fff;
+    margin: 25vh auto;
     border-radius: 10px;
+    max-width: 100%;
     width: 400px;
     height: 550px;
     justify-content: center;
@@ -462,5 +413,14 @@ input{
     background: rgb(143, 164, 233);
     color: #fff;
     margin:auto 100px ;
-  }
+  
+
 }
+}
+@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1200px) {}
+
+
+
