@@ -447,6 +447,9 @@ input{
   .presentacion{
     text-align: center;
   }
+  .contact{
+    padding: 10px 40px;
+  }
   
   
 }
