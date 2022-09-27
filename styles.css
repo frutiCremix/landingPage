@@ -383,10 +383,10 @@ input{
     text-align: center;
   }
   .informacion-img>img{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin:10vh auto 75px auto;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin: 10vh auto 10px auto;
   }
   
   .skills{
@@ -497,6 +497,23 @@ input{
   .presentacion{
     text-align: center;
   }
+  .informacion-content{
+    background: #fff;
+    display: flex;
+    width: 70%;
+    height: 90vh;
+    border-radius: 20px;
+    margin: 5vh auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+    flex-direction: column-reverse;
+  }
+  .informacion-p{
+    padding: 10px 0;
+  }
   .contact{
     width: 100%;
     padding: 0 10px;
@@ -508,6 +525,7 @@ input{
     padding: 10px;
     width: 100%;
   }
+  
   
   
   
