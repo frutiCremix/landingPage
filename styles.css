@@ -499,7 +499,6 @@ input{
   }
   .contact{
     width: 100%;
-    max-width: 425px;
     padding: 0 10px;
     display: flex;
     justify-content: center;
@@ -507,6 +506,8 @@ input{
   }
   .formulario{
     padding: 10px;
+    width: 100%;
+
   }
   
   
