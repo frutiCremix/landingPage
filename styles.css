@@ -369,6 +369,7 @@ input{
     background: #fff;
     display: flex;
     width: 70%;
+    min-height: 350px;
     border-radius: 20px;
     margin: 10vh auto;
     padding: 20px;
