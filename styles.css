@@ -71,7 +71,9 @@ a{
 ul{
   list-style: none;
 }
-
+*{
+  box-sizing: border-box;
+}
 @media only screen and (min-width: 768px) {
   .nav>ul>li>a{
     font-size: 24px;
@@ -162,7 +164,7 @@ body{
   flex-direction: row;
   justify-content: space-evenly;
   text-decoration: none;
-  border: 1 solid;
+  border: 1px solid;
   
 }
 
@@ -497,7 +499,7 @@ input{
   }
   .contact{
     width: 100%;
-    max-width: 375px;
+    max-width: 425px;
     padding: 0 10px;
     display: flex;
     justify-content: center;
