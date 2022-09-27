@@ -384,9 +384,9 @@ input{
   }
   .informacion-img>img{
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
-      margin: 10vh auto 10px auto;
+      width: 150px;
+      height: 150px;
+      
   }
   
   .skills{
